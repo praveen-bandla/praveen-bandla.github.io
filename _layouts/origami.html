@@ -9,7 +9,7 @@ layout: default
     {% assign tab_key = page.title | downcase %}
     {% assign title = site.data.locales[lang].tabs[tab_key] | default: page.title %}
     <h1 class="title">
-      Testing title
+      Origami Collection
     </h1>
     <div class="content">
       {{ content }}
@@ -17,6 +17,21 @@ layout: default
   {% else %}
     {{ content }}
   {% endif %}
-  
 
+  <!-- Image Grid Container -->
+  <div class="image-grid">
+    <img src="/assets/img/origami/IMG_0461.jpg" alt="Description">
+    <img src="/assets/img/origami/IMG_0462.jpg" alt="Description">
+    <img src="/assets/img/origami/IMG_0885.jpg" alt="Description">
+
+    <img src="/assets/img/origami/IMG_1012.jpg" alt="Description">
+    <img src="/assets/img/origami/IMG_0390.jpg" alt="Description">
+    <img src="/assets/img/origami/IMG_9994.jpg" alt="Description">
+
+    <img src="/assets/img/origami/IMG_0479.jpg" alt="Description">
+    <img src="/assets/img/origami/IMG_0453.jpg" alt="Description">
+    <img src="/assets/img/origami/IMG_1161.jpg" alt="Description">
+    <!-- Add more images as needed -->
+  </div>
+  
 </article>

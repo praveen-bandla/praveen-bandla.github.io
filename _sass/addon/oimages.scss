@@ -1,0 +1,12 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* adjust minmax for your preferred image size */
+    grid-gap: 10px; /* adjust for desired spacing */
+  }
+  
+  .image-grid img {
+    width: 100%; /* makes image fill the cell */
+    height: auto; /* maintain aspect ratio */
+    object-fit: cover; /* adjust how images fit within the cell */
+  }
+  
