@@ -28,7 +28,7 @@ order: 6
 </div>
 
 <div style="display: flex; align-items: center; gap: 10px;">
-  <img src="/assets/img/mun/ucbmun.jpg" alt="Description" style="width: 300px;">
+  <img src="/assets/img/mun/ucbmun.JPG" alt="Description" style="width: 300px;">
   <div>
     <p>
     UCBMUN 2019
@@ -53,7 +53,7 @@ order: 6
 
 
 <div style="display: flex; align-items: center; gap: 10px;">
-  <img src="/assets/img/mun/bruinmunboard.jpg" alt="Description" style="width: 300px;">
+  <img src="/assets/img/mun/bruinmunboard.JPG" alt="Description" style="width: 300px;">
   <div>
     <p>
     BruinMUN 2019
