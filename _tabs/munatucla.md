@@ -28,7 +28,7 @@ order: 6
 </div>
 
 <div style="display: flex; align-items: center; gap: 10px;">
-  <img src="/assets/img/mun/UCBMUN3.jpg" alt="Description" style="width: 300px;">
+  <img src="/assets/img/mun/ucbmun.jpg" alt="Description" style="width: 300px;">
   <div>
     <p>
     UCBMUN 2019
@@ -41,7 +41,7 @@ order: 6
 </div>
 
 <div style="display: flex; align-items: center; gap: 10px;">
-  <img src="/assets/img/mun/Board.jpg" alt="Description" style="width: 300px;">
+  <img src="/assets/img/mun/board.jpg" alt="Description" style="width: 300px;">
   <div>
     <p>
     MUN at UCLA Executive Board 2019-2020
@@ -53,7 +53,7 @@ order: 6
 
 
 <div style="display: flex; align-items: center; gap: 10px;">
-  <img src="/assets/img/mun/BruinMUN_Board.jpg" alt="Description" style="width: 300px;">
+  <img src="/assets/img/mun/bruinmunboard.jpg" alt="Description" style="width: 300px;">
   <div>
     <p>
     BruinMUN 2019
