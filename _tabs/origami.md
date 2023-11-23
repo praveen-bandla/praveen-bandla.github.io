@@ -12,25 +12,3 @@ Much of work is emulating models sketched by Robert J. Lang, Meenakshi Mukerji, 
 
 Here is a collection of my work
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src="/assets/img/origami/IMG_0013.HEIC" alt="Description 1"></div>
-    <div class="swiper-slide"><img src="/assets/img/origami/IMG_0019.HEIC" alt="Description 2"></div>
-    <div class="swiper-slide"><img src="/assets/img/origami/IMG_0025.HEIC" alt="Description 3"></div>
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div>
-
