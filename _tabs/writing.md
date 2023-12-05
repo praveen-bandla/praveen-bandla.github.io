@@ -1,7 +1,7 @@
 ---
-layout: research
-icon: fas fa-archive
-order: 7
+layout: writtenworks
+icon: fa-solid fa-pencil
+order: 5
 ---
 
 

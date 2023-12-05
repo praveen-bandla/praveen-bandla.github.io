@@ -5,116 +5,46 @@ refactor: true
 
 {% include lang.html %}
 
-{% assign pinned = site.posts | where: 'pin', 'true' %}
-{% assign default = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
 
-{% assign posts = '' | split: '' %}
 
-<!-- Get pinned posts -->
+<head>
+  <h1 style="font-size: 60px; text-align: center;">
+    Hello!
+</h1>
 
-{% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign pinned_num = pinned.size | minus: offset %}
-
-{% if pinned_num > 0 %}
-  {% for i in (offset..pinned.size) limit: pinned_num %}
-    {% assign posts = posts | push: pinned[i] %}
-  {% endfor %}
-{% else %}
-  {% assign pinned_num = 0 %}
-{% endif %}
-
-<!-- Get default posts -->
-
-{% assign default_beg = offset | minus: pinned.size %}
-
-{% if default_beg < 0 %}
-  {% assign default_beg = 0 %}
-{% endif %}
-
-{% assign default_num = paginator.posts | size | minus: pinned_num %}
-{% assign default_end = default_beg | plus: default_num | minus: 1 %}
-
-{% if default_num > 0 %}
-  {% for i in (default_beg..default_end) %}
-    {% assign posts = posts | push: default[i] %}
-  {% endfor %}
-{% endif %}
-
-<h1>Welcome to my website!</h1>
-
-<div id="post-list" class="flex-grow-1 px-xl-1">
-  {% for post in posts %}
-    <article class="card-wrapper card">
-      <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
-        {% assign card_body_col = '12' %}
-
-        {% if post.image %}
-          {% assign src = post.image.path | default: post.image %}
-          {% unless src contains '//' %}
-            {% assign src = post.img_path | append: '/' | append: src | replace: '//', '/' %}
-          {% endunless %}
-
-          {% assign alt = post.image.alt | xml_escape | default: 'Preview Image' %}
-
-          {% assign lqip = null %}
-
-          {% if post.image.lqip %}
-            {% capture lqip %}lqip="{{ post.image.lqip }}"{% endcapture %}
-          {% endif %}
-
-          <div class="col-md-5">
-            <img src="{{ src }}" alt="{{ alt }}" {{ lqip }}>
-          </div>
-
-          {% assign card_body_col = '7' %}
-        {% endif %}
-
-        <div class="col-md-{{ card_body_col }}">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">{{ post.title }}</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
-                {% include no-linenos.html content=post.content %}
-                {{ content | markdownify | strip_html | truncate: 200 | escape }}
-              </p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                {% include datetime.html date=post.date lang=lang %}
-
-                <!-- categories -->
-                {% if post.categories.size > 0 %}
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    {% for category in post.categories %}
-                      {{ category }}
-                      {%- unless forloop.last -%},{%- endunless -%}
-                    {% endfor %}
-                  </span>
-                {% endif %}
-              </div>
-
-              {% if post.pin %}
-                <div class="pin ms-1">
-                  <i class="fas fa-thumbtack fa-fw"></i>
-                  <span>{{ site.data.locales[lang].post.pin_prompt }}</span>
-                </div>
-              {% endif %}
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  {% endfor %}
+</head>
+<p>
+  My name is Praveen and welcome to my website! I graduated from UCLA in June 2023 
+  majoring in Mathematics and Economics with a minor in Computation. My journey to this 
+  point has been defined by a relentless drive for learning and a deep-seated desire
+   to create impact. Fueled by an insatiable curiosity, I strive to continuously grow and
+    embrace challenges with enthusiasm. My passion lies in leveraging data to guide strategic 
+    decision-making
+    and pioneering transformative technologies in unexplored domains.
+  <br>
+  <br>
+  <a href="https://drive.google.com/file/d/1uCEso1qr6DPC6vkS0IcDVDUmuB8OCjdX/view?usp=sharing"target="_blank">Resume</a>
+</p>
+<div class="custom-image-container">
+<img src="https://user-images.githubusercontent.com/114946455/231066370-7baea9b9-b1b6-419b-a3a1-c9a0db5bf28c.gif">
 </div>
-<!-- #post-list -->
+<p style="text-align: center; font-style: italic;">
+  Population Growth Rate in the US 1970-1975
+</p>
+<p>Here is a visualization I made! Find the complete version (1970-2020) <a href="https://drive.google.com/file/d/14dtF-J1U4thSkdRu88S5Oc7tmt47UHOm/view?usp=sharing"target="_blank">here</a>.</p>
+  
 
-{% if paginator.total_pages > 1 %}
-  {% include post-paginator.html %}
-{% endif %}
+
+<!-- <body>
+{{ "<img src='/assets/img/population_growth.gif'>" | markdownify }}
+
+</body> -->
+<!-- <figure>
+<img src="/assets/img/population_growth.gif" style="width: 70%">
+<br>
+<br>
+</figure> -->
+
+
+
+
